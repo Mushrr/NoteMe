@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --hand-write-font: 'Nevermind hand'
+}
+
+body {
+    font-family: var(--hand-write-font);
+}
+
+input {
+    outline: none;
+    border-bottom: 2px black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
