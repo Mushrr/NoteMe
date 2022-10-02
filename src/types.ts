@@ -1,8 +1,14 @@
 export interface Sec {
+    elementId: string,
     type: string,
-    children?: Array<Sec>
+    children?: Array<Sec>,
+    parent: Sec | undefined,
+    reflink: HTMLElement,
     [props: string]: any
 }
 
 
 export type NoteMeElement = 'H' | 'SimpleText' | 'ImageGallery' | 'SimpleTextRow'
+
+
+export type EditorPageElement = Array<Sec>

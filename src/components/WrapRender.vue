@@ -1,7 +1,7 @@
 <template>
     <template v-for="sec in props.data">
         <template v-if="sec.type === 'h'">
-            <H :level="sec.level" :content="sec.content" :contenteditable="props.contenteditable" @focus="emitFocus(sec)">
+            <H :level="sec.level" :content="sec.content" :contenteditable="props.contenteditable" :elementId="sec.elementId">
                 <template v-if="sec.children">
                     <WrapRender :data="sec.children" :contenteditable="props.contenteditable"></WrapRender>
                 </template>
@@ -33,13 +33,6 @@ import SimpleText from './wrapComponents/SimpleText.vue';
 import ImageGallery from './wrapComponents/ImageGallery.vue';
 import SimpleTextRow from './wrapComponents/SimpleTextRow.vue';
 
-const emits = defineEmits(['changeFocus']);
-
-function emitFocus(el) {
-    console.log('Focus');
-    console.log(el);
-    emits('changeFocus', el);
-}
 
 const props = defineProps<{
     data: Array<Sec>;

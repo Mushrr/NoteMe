@@ -9,7 +9,6 @@
     <!-- {{props}} -->
         <div class="">
             <span v-if="props.icon || props.sectitle">
-                
                 <span :contenteditable="props.contenteditable" class="pr-4" v-if="props.icon">{{props.icon}}</span>
                 <span :contenteditable="props.contenteditable" v-if="props.sectitle">{{props.sectitle}}</span>
             </span>

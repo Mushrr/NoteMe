@@ -2,7 +2,7 @@
     <div id="wraper" class="relative">
         <HoverImage ></HoverImage>
         <div id="editor" ref="editor" @keypress="notice($event)">
-            <WrapRender :data="page" :contenteditable="true" @changeFocus="changeBind(el)"></WrapRender>
+            <WrapRender :data="editorPageState.currPageSate" :contenteditable="true"></WrapRender>
         </div>
         <div id="selectionbox" class="absolute w-36 max-h-48 overflow-y-scroll" ref="selecttionbox"
             :style="{'visibility': hidden ? 'hidden' : 'visible' }">
@@ -20,13 +20,11 @@ import { onBeforeMount, onMounted, onUnmounted, ref } from 'vue';
 import WrapRender from '../components/WrapRender.vue';
 import { NoteMeElement } from '../types';
 import HoverImage from '../components/HoverImage.vue';
+import useEditorState from '../states/useEditorState';
 
-const page = ref([
-    {
-        type: 'simpletextrow',
-        content: ""
-    }
-])
+const editorPageState = useEditorState();  
+
+
 
 const editor = ref(null);
 const currentFocus = ref(null);
@@ -42,7 +40,7 @@ const commandList = ref([
         selected: false,
         data: {
             level: 1
-        }
+        },
     },
     {
         icon: '🧊', // image or ? xxx
@@ -90,6 +88,7 @@ function createNode(elementName: NoteMeElement, options?: { [props: string]: any
             type: 'h',
             level: options!.level,
             content: "edit some",
+            link: null
         }
     } else if (elementName === 'SimpleText') {
         return {
@@ -98,21 +97,23 @@ function createNode(elementName: NoteMeElement, options?: { [props: string]: any
             sectitle: 'title',
             content: [
                 "Edit some"
-            ]
+            ],
+            link: null
         }
     } else if (elementName === 'ImageGallery') {
         return {
             type: 'imagegallery',
             href: '',
-            alt: ''
+            alt: '',
+            link: null
         }
     } else if (elementName === 'SimpleTextRow') {
         return {
             type: 'simpletextrow',
-            content: 'edit some'
+            content: 'edit some',
+            link: null
         }
     }
-
 }
 
 
@@ -132,10 +133,13 @@ function notice(e: KeyboardEvent) {
 
         }
     }
+
 }
 
 
 onMounted(() => {
+    // @ts-ignore
+    currentFocus.value = document.activeElement;
     document.addEventListener('keydown', e => {
         let beforeDeleteElementValue = (currentFocus.value! as HTMLElement).textContent;
         // 如果检测到 ESC hidden
@@ -184,6 +188,7 @@ onMounted(() => {
                 let element = createNode(commandList.value[selectIndex.value].value as NoteMeElement, commandList.value[selectIndex.value].data!)
                 console.log(element);
                 page.value.push(element);
+                console.log(page.value);
             }
         } else {
             
@@ -195,6 +200,17 @@ onMounted(() => {
                 
             }
             // e.preventDefault();
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                
+                editorPageState.move('down');
+                
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+
+                editorPageState.move('up');
+            }
         }
     })
 })
