@@ -14,7 +14,8 @@
 
 const props = defineProps({
     href: String,
-    alt: String
+    alt: String,
+    contenteditable: Boolean
 })
 </script>
 

@@ -9,17 +9,18 @@
     <!-- {{props}} -->
         <div class="">
             <span v-if="props.icon || props.sectitle">
-                <span class="pr-4" v-if="props.icon">{{props.icon}}</span>
-                <span v-if="props.sectitle">{{props.sectitle}}</span>
+                
+                <span :contenteditable="props.contenteditable" class="pr-4" v-if="props.icon">{{props.icon}}</span>
+                <span :contenteditable="props.contenteditable" v-if="props.sectitle">{{props.sectitle}}</span>
             </span>
         </div>
         <div>
             <template v-for="row in props.content">
                 <template v-if="typeof row === 'string'">
-                    <SimpleTextRow :content="row" ></SimpleTextRow>
+                    <SimpleTextRow :content="row" :contenteditable="props.contenteditable"></SimpleTextRow>
                 </template>
                 <template v-if="(row as Sec).type">
-                    <WrapRender :data="[row]"></WrapRender>
+                    <WrapRender :data="[row]" :contenteditable="props.contenteditable"></WrapRender>
                 </template>
             </template>
         </div>
@@ -33,8 +34,9 @@ import WrapRender from '../WrapRender.vue';
 
 interface SimpleText extends Sec {
     icon?: String,
-    sectitle?: String
-    content: Array<String | Sec> // 即允许字符串 又允许 Sec 元素
+    sectitle?: String,
+    content: Array<String | Sec>, // 即允许字符串 又允许 Sec 元素,
+    contenteditable: Boolean
 }
 
 const props = defineProps<SimpleText>()

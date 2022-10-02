@@ -1,10 +1,11 @@
 <template>
-    <p>{{props.content}}</p>
+    <p class="border-b-2 pl-4 pr-4" :contenteditable="props.contenteditable">{{props.content}}</p>
 </template>
 
 <script lang='ts' setup>
 const props = defineProps({
-    content: String
+    content: String,
+    contenteditable: Boolean
 })
 
 </script>

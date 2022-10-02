@@ -3,3 +3,6 @@ export interface Sec {
     children?: Array<Sec>
     [props: string]: any
 }
+
+
+export type NoteMeElement = 'H' | 'SimpleText' | 'ImageGallery' | 'SimpleTextRow'

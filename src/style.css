@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+    background-color: #f3f3f3f3;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 2px;
+}
+
 :root {
     --hand-write-font: 'Nevermind hand'
 }
@@ -15,7 +31,3 @@ input {
     border-bottom: 2px black;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
