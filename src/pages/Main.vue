@@ -1,12 +1,12 @@
 <template>
     <div>
-        <Nav />
+        <Nav></Nav>
         <main class="content-center mr-auto ml-auto max-w-4xl">
             <div>
                 <router-view></router-view>
             </div>
         </main>
-        <Footer />
+        <Footer></Footer>
     </div>
 </template>
 

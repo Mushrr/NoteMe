@@ -1,7 +1,7 @@
 export interface Sec {
     elementId: string,
     type: string,
-    children?: Array<Sec>,
+    children?: Array<Sec | string>,
     parent: Sec | undefined,
     reflink: HTMLElement,
     [props: string]: any

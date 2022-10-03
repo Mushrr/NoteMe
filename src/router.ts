@@ -1,23 +1,32 @@
 import { create } from 'ts-node'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import MainBoard from  './pages/MainBoard.vue'
+import About from './pages/About.vue'
+import Blog from './pages/Blog.vue'
+import Main from './pages/Main.vue'
 
 const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        component: import('./pages/Main.vue'),
+        component: Main,
         children: [
             {
+                path: 'mainboard',
+                component: MainBoard
+            },
+            {
                 path: 'about',
-                component: import('./pages/About.vue')
+                component: About
             },
             {
                 path: 'blog/:blogid*',
-                component: import('./pages/Blog.vue')
+                component: Blog
             },
-            {
-                path: 'editor',
-                component: import('./pages/Editor.vue')
-            }
+            // {
+            //     path: 'editor',
+            //     component: import('./pages/Editor.vue')
+            // }
+            
         ]
     },
 ]
@@ -26,5 +35,6 @@ const router = createRouter({
     routes: routes,
     history: createWebHistory()
 })
+
 
 export default router;

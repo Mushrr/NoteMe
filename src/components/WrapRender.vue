@@ -12,8 +12,9 @@
             <SimpleText 
             :icon="sec.icon" 
             :sectitle="sec.sectitle"
-            :content="sec.content"
+            :children="sec.children"
             :contenteditable="props.contenteditable"
+            :elementId="sec.elementId"
             >
             </SimpleText>
         </template>

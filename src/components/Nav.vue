@@ -1,8 +1,8 @@
 <template>
     <nav class="p-2 h-12 border-b-2 flex flex-row items-center place-content-between">
-        <span class="flex flex-row items-center">
+        <span class="flex flex-row items-center" @click="main">
             <span class="rounded-full border-black w-8 h-8 bg-center flex flex-row items-center place-content-center overflow-hidden">
-                <img :src="imagePath" class="w-9 h-12" alt="nanami" @click="edit()"/>
+                <img :src="imagePath" class="w-9 h-12" alt="nanami" />
             </span>
             <span class="pl-4">Mushr</span>
         </span>
@@ -23,15 +23,12 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-const props = defineProps({
-
-})
-
 const imagePath = ref(`${baseURL}/image/o2eqbmmat9ae3esh7jetkkc95sianr12.jpeg`);
 
-function edit() {
+function main() {
     router.push({
-        path: '/editor'
+        path: '/mainboard',
+        replace: true
     })
 }
 

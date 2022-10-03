@@ -21,6 +21,7 @@ import WrapRender from '../components/WrapRender.vue';
 import { NoteMeElement } from '../types';
 import HoverImage from '../components/HoverImage.vue';
 import useEditorState from '../states/useEditorState';
+import { createNode } from '../utils';
 
 const editorPageState = useEditorState();  
 
@@ -81,40 +82,7 @@ const currentBlock = ref(0);
  * 
  * 
 */
-function createNode(elementName: NoteMeElement, options?: { [props: string]: any }) {
-    // 工厂函数
-    if (elementName === 'H') {
-        return {
-            type: 'h',
-            level: options!.level,
-            content: "edit some",
-            link: null
-        }
-    } else if (elementName === 'SimpleText') {
-        return {
-            type: 'simpletext',
-            icon: '🍎',
-            sectitle: 'title',
-            content: [
-                "Edit some"
-            ],
-            link: null
-        }
-    } else if (elementName === 'ImageGallery') {
-        return {
-            type: 'imagegallery',
-            href: '',
-            alt: '',
-            link: null
-        }
-    } else if (elementName === 'SimpleTextRow') {
-        return {
-            type: 'simpletextrow',
-            content: 'edit some',
-            link: null
-        }
-    }
-}
+
 
 
 function notice(e: KeyboardEvent) {
@@ -133,7 +101,6 @@ function notice(e: KeyboardEvent) {
 
         }
     }
-
 }
 
 
@@ -186,9 +153,10 @@ onMounted(() => {
             if (e.key === 'Enter') {
                 e.preventDefault(); // 阻止
                 let element = createNode(commandList.value[selectIndex.value].value as NoteMeElement, commandList.value[selectIndex.value].data!)
-                console.log(element);
-                page.value.push(element);
-                console.log(page.value);
+                // 看看当前元素是否为空，如果为空那么就替换，
+                // 如果不为空那么就嵌套元素
+                // @ts-ignore
+                editorPageState.addElement(element);
             }
         } else {
             
@@ -204,12 +172,12 @@ onMounted(() => {
             if (e.key === 'ArrowDown') {
                 e.preventDefault();
                 
-                editorPageState.move('down');
+                editorPageState.move('down', 'off');
                 
             } else if (e.key === 'ArrowUp') {
                 e.preventDefault();
 
-                editorPageState.move('up');
+                editorPageState.move('up', 'off');
             }
         }
     })

@@ -1,6 +1,7 @@
 <template>
     <!-- <template v-if="!route.params.blogid">
     </template> -->
+    blog
 </template>
 <!-- 
 

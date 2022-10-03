@@ -31,3 +31,15 @@ input {
     border-bottom: 2px black;
 }
 
+.typing-animation {
+    animation: typing 1000ms infinite;
+}
+
+@keyframes typing {
+    0%, 100% {
+        border-right: 2px solid;
+    }
+    50% {
+        border-right: 2px solid rgba(0, 0, 0, 0);
+    }
+}

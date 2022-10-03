@@ -1,33 +1,32 @@
 <template>
-    <div class="text-center">
-        <Render :data="data"></Render>
-    </div>
+    <Render :data="data"></Render>
 </template>
 
 
 <script lang="ts" setup>
-import { useRoute } from 'vue-router';
 import Render from '../components/Render.vue';
 import { baseURL } from '../config';
-
-const route = useRoute();
 
 const data = {
     blogid: "TEST",
     title: "About me",
     blogimg: `${baseURL}/image/618b5co98ldpq1otf00blr19cubtre15.jpeg`,
+    contenteditable: false,
     content: [
         {
             type: 'h',
+            elementId: "Self-Introducation",
             level: 2,
             content: "Self-Introducation",
             children: [
                 {
                     type: "h",
                     level: 3,
+                    elementId: "About work",
                     content: "About Work",
                     children: [
                         {
+                            elementId: "university",
                             type: "simpletextrow",
                             content: "I am in 3rd year of university, Learn So many different course like \
                             computer network、operating system etc. In my spire time, Learning some front knowledges \
@@ -38,6 +37,7 @@ const data = {
                 {
                     type: "h",
                     level: 3,
+                    elementId: "Most",
                     content: "About Life",
                     children: [
                         {
@@ -48,20 +48,24 @@ const data = {
                     ]
                 },
                 {
+                    elementId: "qrvikkh7lt1utal0ajs2nugdmcvhqv97",
                     type: "imagegallery",
                     href: `${baseURL}/image/qrvikkh7lt1utal0ajs2nugdmcvhqv97.jpeg`
                 },
                 {
                     type: "simpletext",
+                    elementId: "contact",
                     icon: '🌵',
                     sectitle: 'Contact Me',
-                    content: [
+                    children: [
                         {
+                            elementId: "with",
                             type: 'h',
                             level: 3,
                             content: "You can contact me with"
                         },
                         {
+                            elementId: "edu",
                             type: 'h',
                             level: 3,
                             content: 'mushroom@mails.ccnu.edu.cn'
