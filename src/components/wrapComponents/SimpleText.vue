@@ -8,17 +8,17 @@
     ">
         <div class="">
             <span v-if="props.icon || props.sectitle">
-                <span :contenteditable="props.contenteditable" class="pr-4" v-if="props.icon">{{props.icon}}</span>
-                <span :contenteditable="props.contenteditable" v-if="props.sectitle">{{props.sectitle}}</span>
+                <span class="pr-4" v-if="props.icon">{{props.icon}}</span>
+                <span v-if="props.sectitle">{{props.sectitle}}</span>
             </span>
         </div>
         <div>
             <template v-for="row in props.children">
                 <template v-if="typeof row === 'string'">
-                    <SimpleTextRow :content="row" :contenteditable="props.contenteditable"></SimpleTextRow>
+                    <SimpleTextRow :content="row"></SimpleTextRow>
                 </template>
                 <template v-if="(row as Sec).type">
-                    <WrapRender :data="[row]" :contenteditable="props.contenteditable"></WrapRender>
+                    <WrapRender :data="[row]"></WrapRender>
                 </template>
             </template>
         </div>

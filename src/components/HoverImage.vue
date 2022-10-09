@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-row 
     place-content-center h-44 bg-cover bg-center
-    md:h-56 rounded-xl shadow-2xl m-2 relative
-    " :style="{'backgroundImage': `url(${props.blogimg})`}">
+    md:h-56 rounded-xl shadow-2xl m-2 relative"
+     :style="{'background-image': `url(${props.blogimg})`} ">
     <span class="absolute 
      left-2 bottom-2
      text-3xl text-white

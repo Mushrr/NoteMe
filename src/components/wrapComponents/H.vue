@@ -7,8 +7,8 @@
         mt-2
         ">
             <p :contenteditable="props.contenteditable" class="border-l-4 pl-2 border-blue-400"
-                :style="{fontSize: sigmoid(props.level) * 10 + 'rem'}" ref="curRefLink" @focus="changeFocus"
-                @input="handleInput">
+                :style="{fontSize: sigmoid(props.level) * 10 + 'rem'}" ref="curRefLink" 
+                >
                 {{props.content}}
             </p>
             <slot></slot>
@@ -18,23 +18,15 @@
 
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue';
-import useEditorState from '../../states/useEditorState';
 import { isEditor } from '../../utils'
 
-const editorPageState = useEditorState();
 const curRefLink = ref(null);
 
 function sigmoid(level: number) {
     return 1 / (1 + Math.pow(Math.E, level))
 }
 
-function handleInput() {
-    isEditor(props.contenteditable, () => {
-        editorPageState.$patch(state => {
-            state.activeElement.content = curRefLink.value.innerText;
-        })
-    })
-}
+
 
 const props = defineProps({
     level: {
@@ -47,11 +39,6 @@ const props = defineProps({
     elementId: String,
 })
 
-function changeFocus() {
-    isEditor(props.contenteditable, () => {
-        editorPageState.changeActive(props.elementId!);
-    })
-}
 
 
 onMounted(() => {

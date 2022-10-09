@@ -1,7 +1,7 @@
 <template>
     <div id="page">
         <template v-if="route.params.blogid">
-            <Render :data="data"></Render>
+            <Render :data="(data as Blog)"></Render>
         </template>
     </div>
 </template>
@@ -26,6 +26,7 @@ import {useRoute} from 'vue-router';
 import Render from '../components/Render.vue';
 import {onMounted, ref} from 'vue';
 import {gsap} from 'gsap';
+import { Blog } from '../types';
 
 const route = useRoute();
 const data = ref({});

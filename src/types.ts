@@ -7,6 +7,16 @@ export interface Sec {
     [props: string]: any
 }
 
+export interface Blog {
+    blogid: string,
+    title: string,
+    blogimg: string,
+    content: Array<{
+        type: string,
+        [propnames: string]: any
+    }>,
+    contenteditable: Boolean
+}
 
 export type NoteMeElement = 'H' | 'SimpleText' | 'ImageGallery' | 'SimpleTextRow'
 

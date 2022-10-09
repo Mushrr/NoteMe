@@ -1,22 +1,16 @@
 <template>
-    <p class="border-b-2 pl-4 pr-4" :contenteditable="props.contenteditable" ref="curRefLink" @focus="changeFocus">
+    <p class="border-b-2 pl-4 pr-4" ref="curRefLink" >
         {{props.content}}
     </p>
 </template>
 
 <script lang='ts' setup>
-import useEditorState from '../../states/useEditorState';
 import { ref, onMounted } from 'vue';
 import { isEditor } from '../../utils'
 
-const editorPageState = useEditorState();
 const curRefLink = ref(null);
 
-function changeFocus() {
-    isEditor(props.contenteditable, () => {
-        editorPageState.changeActive(props.elementId!);
-    })
-}
+
 
 const props = defineProps({
     elementId: String,
