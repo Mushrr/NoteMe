@@ -20,7 +20,7 @@ pnpm dev
 * then change `deploy.sh` to ensure username is the same as your github username
 * finally excute `deploy.sh`
 * if there isn't any error you can find, you just need to wait a moment.
-* https://<username>.github.io
+* https://username.github.io
 
 ##### Stack
 ✨typescript
