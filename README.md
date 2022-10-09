@@ -15,6 +15,10 @@ pnpm install
 pnpm dev
 ```
 
+##### write blogs
+* config bloglist `/src/blogs/blogs.json`
+* write blog `/src/blogs/yourblogname.json`, 
+
 ##### github pages
 * first to create a github.io repository
 * then change `deploy.sh` to ensure username is the same as your github username
@@ -22,11 +26,23 @@ pnpm dev
 * if there isn't any error you can find, you just need to wait a moment.
 * https://username.github.io
 
+##### current blocks
+* [X] Image Gallery
+* [X] Simple Text Area
+* [X] Header
+* [X] Blog Title
+* [X] Simple Audio Block
+
+##### In Future
+* [ ] Grid
+* [ ] Mermaid
+* [ ] ...
+
 ##### Stack
-✨typescript
-🌵vue
-🧊tailwind
-🍎gsap
+✨typescript  
+🌵vue  
+🧊tailwind  
+🍎gsap  
 
 ##### wishes
 wish you have fun with this project
