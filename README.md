@@ -1,31 +1,38 @@
 ###### A Static Blog Engine - Use Vue
 
-* [X] Render Syntax
-* [ ] Editor
-    * Data structure
-    ![](./screenshots/preview3.png)
-* [ ] More Components
-    * SimpleText Component
-    ![](./screenshots/preview4.png)
-    * H Component
-    ![](./screenshots/preview5.png)
-    * Blog Surface
-    ![](./screenshots/preview7.png)
+[Live example](https://Mushr.github.io)
+
+#### usage
+
+##### local
+```
+git clone https://github.com/Mushrr/NoteMe
+
+cd NoteMe
+
+pnpm install
+
+pnpm dev
+```
+
+##### github pages
+* first to create a github.io repository
+* then change `deploy.sh` to ensure username is the same as your github username
+* finally excute `deploy.sh`
+* if there isn't any error you can find, you just need to wait a moment.
+* https://<username>.github.io
+
+##### Stack
+✨typescript
+🌵vue
+🧊tailwind
+🍎gsap
+
+##### wishes
+wish you have fun with this project
+any question you have met, don't hesitate to contact me ✉️!
 
 
-
-
-
-
-
-
-
-#### Mobile
-![](./screenshots/preview1.png)
-
-#### PC / Pad
-![](./screenshots/preview2.png)
-
-#### Contact
+##### Contact
 
 mushroom@mails.ccnu.edu.cn

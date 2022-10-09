@@ -31,28 +31,13 @@ import { onMounted, ref, watch } from 'vue';
 import useScroll from '../use/useScroll';
 import BlogBlock from '../components/BlogBlock.vue';
 import router from '../router';
+import allPages from '../blogs/blogs.json'
 
 const { x, y } = useScroll();
 const load = ref(false);
 const blogrefs = ref([]);
 const blogs = ref(
-    [
-        {
-            blogtitle: "About me",
-            blogimg: '/assets/images/nanami.jpg',
-            blogid: "aboutme",
-        },
-        {
-            blogtitle: "Clannad",
-            blogimg: '/assets/images/clannadfamily.jpg',
-            blogid: "clannad",
-        },
-        {
-            blogtitle: "青山七海",
-            blogimg: '/assets/images/nanami2.jpg',
-            blogid: "nanami",
-        }
-    ]
+    allPages
 )
 
 watch(y, (val, oldVal) => {

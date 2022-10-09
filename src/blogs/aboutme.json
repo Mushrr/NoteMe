@@ -1,7 +1,7 @@
 {
     "blogid": "TEST",
     "title": "About me",
-    "blogimg": "/assets/images/nanami.jpg",
+    "blogimg": "/images/nanami.jpg",
     "contenteditable": false,
     "content": [
         {
@@ -39,7 +39,7 @@
                 {
                     "elementId": "qrvikkh7lt1utal0ajs2nugdmcvhqv97",
                     "type": "imagegallery",
-                    "href": "/assets/images/clannadfamily.jpg"
+                    "href": "/images/clannadfamily.jpg"
                 },
                 {
                     "type": "simpletext",

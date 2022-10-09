@@ -15,6 +15,10 @@ export interface Blog {
         type: string,
         [propnames: string]: any
     }>,
+    scroll?: {
+        x: number,
+        y: number
+    }
     contenteditable: Boolean
 }
 

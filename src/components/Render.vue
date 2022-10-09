@@ -1,5 +1,5 @@
 <template>
-    <HoverImage :blogimg="props.data.blogimg" :blogtitle="props.data.title"></HoverImage>
+    <HoverImage :blogimg="props.data.blogimg" :blogtitle="props.data.title" :scroll="props.data.scroll"></HoverImage>
     <WrapRender :data="(props.data.content as Array<Sec>)" :contenteditable="props.data.contenteditable"></WrapRender>
     <!-- {{props.data}} -->
 </template>

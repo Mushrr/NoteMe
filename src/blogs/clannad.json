@@ -1,7 +1,7 @@
 {
     "blogid": "clannad",
     "title": "clannad 团子大家族",
-    "blogimg": "/assets/images/clannadfamily.jpg",
+    "blogimg": "/images/clannadfamily.jpg",
     "contenteditable": false,
     "content": [
         {
@@ -29,12 +29,12 @@
             "children": [
                 {
                     "type": "imagegallery",
-                    "href": "/assets/images/clannad1.jpg",
+                    "href": "/images/clannad1.jpg",
                     "height": 500
                 },
                 {
                     "type": "imagegallery",
-                    "href": "/assets/images/clannad2.jpg",
+                    "href": "/images/clannad2.jpg",
                     "height": 500
                 }
             ]

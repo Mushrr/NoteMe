@@ -1,6 +1,6 @@
 {
     "blogid": "nanami",
-    "blogimg": "/assets/images/nanami3.jpg",
+    "blogimg": "/images/nanami3.jpg",
     "title": "Aoyama Nanami",
     "content": [
         {
@@ -22,7 +22,7 @@
                         {
                             "type": "imagegallery",
                             "height": 500,
-                            "href": "/assets/images/Aoyama_Nanami.png"
+                            "href": "/images/Aoyama_Nanami.png"
                         }
                     ]
                 }
@@ -35,12 +35,12 @@
             "children": [
                 {
                     "type": "imagegallery",
-                    "href": "/assets/images/nanami5.jpg",
+                    "href": "/images/nanami5.jpg",
                     "height": 500
                 },
                 {
                     "type": "imagegallery",
-                    "href": "/assets/images/nanami4.jpg",
+                    "href": "/images/nanami4.jpg",
                     "height": 500
                 }
             ]
@@ -52,7 +52,7 @@
             "children": [
                 {
                     "type": "audio",
-                    "href": "/assets/audio/I Call Your Name Again - Nakatsu Mariko.mp3"
+                    "href": "/audio/I Call Your Name Again - Nakatsu Mariko.mp3"
                 }
             ]
         }

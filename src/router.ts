@@ -1,5 +1,5 @@
 import { create } from 'ts-node'
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from 'vue-router'
 import MainBoard from  './pages/MainBoard.vue'
 import About from './pages/About.vue'
 import Blog from './pages/Blog.vue'
@@ -32,7 +32,7 @@ const routes: RouteRecordRaw[] = [
 
 const router = createRouter({
     routes: routes,
-    history: createWebHistory()
+    history: createWebHashHistory()
 })
 
 
