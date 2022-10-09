@@ -1,6 +1,6 @@
 ###### A Static Blog Engine - Use Vue
 
-[Live example](https://Mushr.github.io)
+[Live example](https://Mushrr.github.io)
 
 #### usage
 
