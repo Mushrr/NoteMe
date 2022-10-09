@@ -1,0 +1,43 @@
+{
+    "blogid": "clannad",
+    "title": "clannad 团子大家族",
+    "blogimg": "/assets/images/clannadfamily.jpg",
+    "contenteditable": false,
+    "content": [
+        {
+            "type": "h",
+            "level": 2,
+            "content": "背景介绍",
+            "children": [
+                {
+                    "type": "simpletext",
+                    "icon": "✨",
+                    "sectitle": "故事发生背景",
+                    "children": [
+                        "故事发生在一所小镇，讲述关于家族，关于命运的故事。",
+                        "故事中的各个人物的历练，成长最终谱写成整个小镇变化的史诗，",
+                        "爱，恨与不甘，友情，爱情与亲情，",
+                        "最终出现了奇迹，改变了世界的轨道。"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "h",
+            "level": 2,
+            "content": "图片",
+            "children": [
+                {
+                    "type": "imagegallery",
+                    "href": "/assets/images/clannad1.jpg",
+                    "height": 500
+                },
+                {
+                    "type": "imagegallery",
+                    "href": "/assets/images/clannad2.jpg",
+                    "height": 500
+                }
+            ]
+        }
+    ]
+}

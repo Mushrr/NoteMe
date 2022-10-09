@@ -5,7 +5,7 @@
     " :style="{'backgroundImage': `url(${props.blogimg})`}">
     <span class="absolute 
      left-2 bottom-2
-     text-3xl text-red-400
+     text-3xl text-white
      pr-2
      typing-animation
      ">{{props.blogtitle}}</span>

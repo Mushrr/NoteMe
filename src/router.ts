@@ -22,12 +22,11 @@ const routes: RouteRecordRaw[] = [
                 path: 'blog/:blogid*',
                 component: Blog
             },
-            // {
-            //     path: 'editor',
-            //     component: import('./pages/Editor.vue')
-            // }
             
-        ]
+        ],
+        redirect: {
+            path: '/mainboard'
+        }
     },
 ]
 

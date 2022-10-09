@@ -4,6 +4,7 @@ specifiers:
   '@vitejs/plugin-vue': ^3.1.0
   autoprefixer: ^10.4.12
   axios: ^0.27.2
+  gsap: ^3.11.3
   pinia: ^2.0.22
   postcss: ^8.4.17
   qs: ^6.11.0
@@ -17,6 +18,7 @@ specifiers:
 dependencies:
   autoprefixer: 10.4.12_postcss@8.4.17
   axios: 0.27.2
+  gsap: 3.11.3
   pinia: 2.0.22_bfjwoga25wxjazzogo7o372nwq
   postcss: 8.4.17
   qs: 6.11.0
@@ -690,6 +692,10 @@ packages:
     engines: {node: '>=10.13.0'}
     dependencies:
       is-glob: 4.0.3
+    dev: false
+
+  /gsap/3.11.3:
+    resolution: {integrity: sha512-xc/iIJy+LWiMbRa4IdMtdnnKa/7PXEK6NNzV71gdOYUVeTZN7UWnLU0fB7Hi1iwiz4ZZoYkBZPPYGg+2+zzFHA==}
     dev: false
 
   /has-symbols/1.0.3:

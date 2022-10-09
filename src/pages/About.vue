@@ -1,81 +1,26 @@
 <template>
-    <Render :data="data"></Render>
+    <div id="page">
+        <Render :data="data"></Render>
+    </div>
 </template>
 
 
 <script lang="ts" setup>
 import Render from '../components/Render.vue';
 import { baseURL } from '../config';
+import aboutme from '../blogs/aboutme.json';
+import { onBeforeMount, onMounted, onUnmounted } from 'vue';
+import { gsap } from 'gsap';
 
-const data = {
-    blogid: "TEST",
-    title: "About me",
-    blogimg: `${baseURL}/image/618b5co98ldpq1otf00blr19cubtre15.jpeg`,
-    contenteditable: false,
-    content: [
-        {
-            type: 'h',
-            elementId: "Self-Introducation",
-            level: 2,
-            content: "Self-Introducation",
-            children: [
-                {
-                    type: "h",
-                    level: 3,
-                    elementId: "About work",
-                    content: "About Work",
-                    children: [
-                        {
-                            elementId: "university",
-                            type: "simpletextrow",
-                            content: "I am in 3rd year of university, Learn So many different course like \
-                            computer network、operating system etc. In my spire time, Learning some front knowledges \
-                            is what I will do. ✨"
-                        }
-                    ]
-                },
-                {
-                    type: "h",
-                    level: 3,
-                    elementId: "Most",
-                    content: "About Life",
-                    children: [
-                        {
-                            type: "simpletextrow",
-                            content: "Most of my spire time, watch some animted film or enjoying some music."
-                        },
+const data = aboutme
 
-                    ]
-                },
-                {
-                    elementId: "qrvikkh7lt1utal0ajs2nugdmcvhqv97",
-                    type: "imagegallery",
-                    href: `${baseURL}/image/qrvikkh7lt1utal0ajs2nugdmcvhqv97.jpeg`
-                },
-                {
-                    type: "simpletext",
-                    elementId: "contact",
-                    icon: '🌵',
-                    sectitle: 'Contact Me',
-                    children: [
-                        {
-                            elementId: "with",
-                            type: 'h',
-                            level: 3,
-                            content: "You can contact me with"
-                        },
-                        {
-                            elementId: "edu",
-                            type: 'h',
-                            level: 3,
-                            content: 'mushroom@mails.ccnu.edu.cn'
-                        }
-                    ],
-                },
-            ]
-        }
-    ]
-}
+onMounted(() => {
+    gsap.from('#page', {
+        y: 1000,
+        ease: "power-4",
+        duration: 0.5
+    })
+})
 </script>
 
 

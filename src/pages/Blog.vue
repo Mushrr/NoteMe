@@ -1,7 +1,9 @@
 <template>
-    <!-- <template v-if="!route.params.blogid">
-    </template> -->
-    blog
+    <div id="page">
+        <template v-if="route.params.blogid">
+            <Render :data="data"></Render>
+        </template>
+    </div>
 </template>
 <!-- 
 
@@ -20,8 +22,27 @@
  -->
 
 <script lang="ts" setup>
+import {useRoute} from 'vue-router';
+import Render from '../components/Render.vue';
+import {onMounted, ref} from 'vue';
+import {gsap} from 'gsap';
+
+const route = useRoute();
+const data = ref({});
 
 
+
+onMounted(async () => {
+    const blogInfo = await import(`../blogs/${route.params.blogid[0]}.json`);
+    console.log(blogInfo);
+    data.value = blogInfo;
+
+    gsap.from('#page', {
+        y: 1000,
+        ease: "power-4",
+        duration: 0.5
+    })
+})
 </script>
 
 <style scoped>

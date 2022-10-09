@@ -1,0 +1,60 @@
+{
+    "blogid": "nanami",
+    "blogimg": "/assets/images/nanami3.jpg",
+    "title": "Aoyama Nanami",
+    "content": [
+        {
+            "type": "h",
+            "level": 2,
+            "content": "人物介绍",
+            "children": [
+                {
+                    "type": "simpletext",
+                    "icon": "✨",
+                    "sectitle": "我呢，一直 一直……喜欢着你，最喜欢了！！——青山七海"
+                },
+                {
+                    "type": "simpletext",
+                    "children": [
+                        "青山七海就读于水明艺术大学附属高中普通科。因为老家在大坂，平时说话时会带有明显的关西腔，",
+                        "梦想是声优，为了练好标准语而刻意封印自己的关西腔，但有时激动或紧张时说话还是会不由自主地出现关西腔。",
+                        "大学的志愿是演剧学部。 在高二暑假时成为樱花庄203号房房客。",
+                        {
+                            "type": "imagegallery",
+                            "height": 500,
+                            "href": "/assets/images/Aoyama_Nanami.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "h",
+            "level": 2,
+            "content": "角色图片",
+            "children": [
+                {
+                    "type": "imagegallery",
+                    "href": "/assets/images/nanami5.jpg",
+                    "height": 500
+                },
+                {
+                    "type": "imagegallery",
+                    "href": "/assets/images/nanami4.jpg",
+                    "height": 500
+                }
+            ]
+        },
+        {
+            "type": "h",
+            "level": 2,
+            "content": "角色歌",
+            "children": [
+                {
+                    "type": "audio",
+                    "href": "/assets/audio/I Call Your Name Again - Nakatsu Mariko.mp3"
+                }
+            ]
+        }
+    ]
+}

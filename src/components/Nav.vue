@@ -11,7 +11,6 @@
         </span>
         <span class="">
             <router-link class="mr-2 hover:underline" to="/about">about me</router-link>
-            <router-link class="hover:underline" to="/blog">blogs</router-link>
         </span>
     </nav>
 </template>
@@ -23,7 +22,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-const imagePath = ref(`${baseURL}/image/o2eqbmmat9ae3esh7jetkkc95sianr12.jpeg`);
+const imagePath = ref(`/assets/images/nanami2.jpg`);
 
 function main() {
     router.push({

@@ -4,6 +4,7 @@
         relative
         md:left-4
         ml-2
+        mt-2
         ">
             <p :contenteditable="props.contenteditable" class="border-l-4 pl-2 border-blue-400"
                 :style="{fontSize: sigmoid(props.level) * 10 + 'rem'}" ref="curRefLink" @focus="changeFocus"

@@ -22,7 +22,10 @@
             <SimpleTextRow :content="sec.content" :contenteditable="props.contenteditable"></SimpleTextRow>
         </template>
         <template v-if="sec.type === 'imagegallery'">
-            <ImageGallery :href="sec.href" :alt="sec.alt" :contenteditable="props.contenteditable"></ImageGallery>
+            <ImageGallery :href="sec.href" :alt="sec.alt" :contenteditable="props.contenteditable" :height="sec.height"></ImageGallery>
+        </template>
+        <template v-if="sec.type === 'audio'">
+            <Audio :href="sec.href"></Audio>
         </template>
     </template>
 </template>
@@ -33,6 +36,7 @@ import {Sec} from '../types'
 import SimpleText from './wrapComponents/SimpleText.vue';
 import ImageGallery from './wrapComponents/ImageGallery.vue';
 import SimpleTextRow from './wrapComponents/SimpleTextRow.vue';
+import Audio from './wrapComponents/Audio.vue';
 
 
 const props = defineProps<{
