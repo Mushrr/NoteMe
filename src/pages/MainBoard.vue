@@ -40,7 +40,7 @@ const blogs = ref(
     allPages
 )
 
-watch(y, (val, oldVal) => {
+const watchScrollY = watch(y, (val, oldVal) => {
     if (val > 100 && !load.value) {
         for (let blogblock of blogrefs.value) {
             console.log('开始动画')
@@ -53,6 +53,7 @@ watch(y, (val, oldVal) => {
         }
         console.log(blogrefs.value);
         load.value = true;
+        watchScrollY(); // 停止监听
     }
 })
 
