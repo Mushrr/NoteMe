@@ -9,6 +9,10 @@ const relLink = [
     {
         text: "Github",
         url: "https://github.com/Mushrr"
+    },
+    {
+        text: "Bilibili",
+        url: "https://space.bilibili.com/273169547"
     }
 ]
 

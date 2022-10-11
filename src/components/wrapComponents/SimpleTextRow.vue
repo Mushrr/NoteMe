@@ -1,5 +1,5 @@
 <template>
-    <p class="border-b-2 pl-4 pr-4" ref="curRefLink" >
+    <p class="border-b-2 pl-4 pr-4 dark:text-gray-300 dark:border-gray-600" ref="curRefLink" >
         {{props.content}}
     </p>
 </template>

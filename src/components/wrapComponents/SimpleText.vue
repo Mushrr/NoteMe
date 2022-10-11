@@ -5,6 +5,8 @@
     border-2 p-2
     rounded-2xl shadow-xl
       md:mr-auto md:ml-auto
+    dark:border-gray-600
+    
     ">
         <div class="">
             <span v-if="props.icon || props.sectitle">

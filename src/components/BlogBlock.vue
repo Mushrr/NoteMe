@@ -11,6 +11,7 @@
                 <span class="absolute 
                 left-2 bottom-2
                 text-3xl text-white
+                dark:text-gray-200
                 pr-2
                 typing-animation
                 ">{{props.blogtitle}}</span>
