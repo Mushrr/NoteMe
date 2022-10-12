@@ -2,17 +2,17 @@
     <div class="relative">
         
         <div class="dark:text-white border-2 dark:border-gray-400 rounded-2xl p-2 flex flex-row items-center">
-            <div class="w-8 border-r-2" @click="pauseAndPlay" :style="{cursor: canPlay ? 'pointer' : 'wait'}">
+            <div class="w-8 border-r-2 dark:border-white " @click="pauseAndPlay" :style="{cursor: canPlay ? 'pointer' : 'wait'}">
                 <play :height="24" :width="24" :color="iconColor" v-if="playing"></play>
                 <pause :height="24" :width="24" :color="iconColor" v-else></pause>
             </div>
-            <div class="md:w-[710px] w-6/12 h-1 bg-gray-600">
-                <div class="h-1 bg-white" :style="{width: currentWidth}"></div>
+            <div class="md:w-[710px] w-6/12 h-1 bg-gray-300 dark:bg-gray-600">
+                <div class="h-1 bg-black dark:bg-white" :style="{width: currentWidth}"></div>
             </div>
             <div class="text-center ml-2">
                 {{currentTime}} / {{totalTime}}
             </div>
-            <div class="text-center mr-auto ml-auto ">
+            <div class="text-center mr-auto ml-auto" @click="muteAudio">
                 <mute :height="24" :width="24" :color="iconColor" v-if="muted"></mute>
                 <volume :height="24" :width="24" :color="iconColor" v-else></volume>
             </div>
@@ -57,6 +57,13 @@ const currentTime = computed(() => {
     let secends = Math.floor(_currentTime.value); // 向下取整
     return numToTime(secends);
 })
+
+function muteAudio() {
+    console.log('静音');
+    let audio = (audioElement.value as HTMLAudioElement)
+    audio.muted = !muted.value;
+    muted.value = !muted.value;
+}
 
 const totalTime = computed(() => {
     let secends = Math.floor(_totalTime.value);

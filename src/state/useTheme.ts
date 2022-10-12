@@ -6,7 +6,7 @@ const useTheme = defineStore('theme', {
     }),
     actions: {
         switchTheme() {
-            console.log("切换了!!!!");
+            console.log(`当前是${this.theme}模式`);
             if (this.theme === 'dark') {
                 this.toLight();
             } else {
@@ -15,13 +15,17 @@ const useTheme = defineStore('theme', {
         },
         toLight() {
             localStorage.setItem('blog_theme', 'light');
-            this.theme = 'light';
+            this.$patch(state => {
+                state.theme = 'light';
+            });
             document.documentElement.classList.remove('dark');
         },
         toDark() {
             localStorage.setItem('blog_theme', 'dark');
             document.documentElement.classList.add('dark');
-            this.theme = 'dark';
+            this.$patch(state => {
+                state.theme = 'dark';
+            });
         }
     }
 })

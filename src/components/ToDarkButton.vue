@@ -1,10 +1,13 @@
 <template>
     <button @click="theme.switchTheme">
             <!-- <Transition name="slide"> -->
-                <span v-if="theme.theme === 'light'">
+                <!-- v-if -->
+                <span v-show="theme.theme === 'light'">
                     <Sun height="24" width="24" :color="iconColor"></Sun>
                 </span>
-                <span v-else>
+                <!-- 如果一开始这个就是false的话 -->
+                <!-- v-show 只要条件变化就会重新渲染 -->
+                <span v-show="theme.theme === 'dark'">
                     <Moon height="24" width="24" :color="iconColor"></Moon>
                 </span>
             <!-- </Transition> -->
@@ -14,8 +17,9 @@
 <script lang='ts' setup>
 import Sun from '../Icons/sun.vue';
 import Moon from '../Icons/moon.vue';
-import { onBeforeMount, ref, watch } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import useTheme from '../state/useTheme';
+
 
 const isDark = ref(false);
 const theme = useTheme();

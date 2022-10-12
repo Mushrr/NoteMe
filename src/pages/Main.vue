@@ -14,13 +14,17 @@
 import Nav from '../components/Nav.vue';
 import Footer from '../components/Footer.vue';
 import useTheme from '../state/useTheme';
+import { onMounted } from 'vue';
 
 const theme = useTheme();
-if ( theme.theme === 'dark' ) {
-    theme.toDark();
-} else {
-    theme.toLight();
-}
+
+onMounted(() => {
+    if (theme.theme === 'dark') {
+        theme.toDark();
+    } else {
+        theme.toLight();
+    }
+})
 
 </script>
 

@@ -12,6 +12,7 @@ const pinia = createPinia();
  */
 
 app.use(pinia);
+
 app.use(router); // 路由
 
 app.mount('#app');
