@@ -27,15 +27,16 @@ pnpm dev
 * https://username.github.io
 
 ##### current blocks
-* [X] Image Gallery
-* [X] Simple Text Area
-* [X] Header
-* [X] Blog Title
-* [X] Simple Audio Block
+* [X] Image Gallery      √ 
+* [X] Simple Text Area   √ 
+* [X] Header             √
+* [X] Blog Title         √  
+* [X] Simple Audio Block √
+* [X] Mermaid 2022/10/13 √
 
 ##### In Future
 * [ ] Grid
-* [ ] Mermaid
+
 * [ ] ...
 
 ##### Stack

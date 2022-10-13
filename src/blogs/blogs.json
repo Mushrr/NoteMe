@@ -18,5 +18,10 @@
         "blogtitle": "Just Because",
         "blogimg": "/images/JSB1.jpg",
         "blogid": "justbecause"
+    },
+    {
+        "blogtitle": "Mermaid",
+        "blogimg": "/images/JSB2.png",
+        "blogid": "test"
     }
 ]

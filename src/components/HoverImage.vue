@@ -5,11 +5,12 @@
      :style="{'background-image': `url(${props.blogimg})`, backgroundPosition: `${props.scroll.x}px ${props.scroll.y}px`} ">
     <span class="absolute 
      left-2 bottom-2
-     text-3xl text-white
+     text-3xl
      dark:text-gray-400
      pr-2
-     typing-animation
-     ">{{props.blogtitle}}</span>
+     typing-animation"
+     :style="{color: props.blogtitlecolor ? props.blogtitlecolor :'#ffffff' }"
+     >{{props.blogtitle}}</span>
     </div>
 </template>
 
@@ -17,6 +18,7 @@
 const props = defineProps({
     blogimg: String,
     blogtitle: String,
+    blogtitlecolor: String,
     scroll: {
         type: Object,
         default() {

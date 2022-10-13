@@ -11,6 +11,7 @@ export interface Blog {
     blogid: string,
     title: string,
     blogimg: string,
+    blogtitlecolor: string,
     content: Array<{
         type: string,
         [propnames: string]: any

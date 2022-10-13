@@ -1,0 +1,166 @@
+{
+    "blogid": "test",
+    "blogimg": "/images/Aoyama_Nanami.png",
+    "title": "Mermaid",
+    "blogtitlecolor": "black",
+    "content": [
+        {
+            "type": "h",
+            "content": "Mushr"
+        },
+        {
+            "type": "mermaid",
+            "content": [
+                "graph TB",
+                "A[13,032] --> |Accept John's Offer| B[12,000]",
+                "A ==> |Reject John's Offer |C(($13,032))",
+                "C --> |Offer from Vanessa 0.6| D[$14,000]",
+                "D ==> |Accept Vanessa's Offer| E[$14,000]",
+                "D --> |Reject Vanessa's Offer| F(($11,580))",
+                "C --> |No Offer from Vanessa 0.4| G(($11,580))",
+                "G --> |Salary 1 0.05| H[$21,600]",
+                "G --> |Salary 2 0.25| I[$16,800]",
+                "G --> |Salary 3 0.40| J[$12,800]",
+                "G --> |Salary 4 0.25| K[$6,000]",
+                "G --> |Salary 5 0.05| L[$0]",
+                "F --> |Salary 1 0.05| M[$21,600]",
+                "F --> |Salary 2 0.25| N[$16,800]",
+                "F --> |Salary 3 0.40| O[$12,800]"
+            ],
+            "tags": [
+                "Flowchart"
+            ],
+            "icon": "🍄"
+        },
+        {
+            "type": "mermaid",
+            "content": [
+                "flowchart TB",
+                "c1-->a2",
+                "subgraph one",
+                "a1-->a2",
+                "end",
+                "subgraph two",
+                "b1-->b2",
+                "end",
+                "subgraph three",
+                "c1-->c2",
+                "end"
+            ],
+            "tags": [
+                "Flowchart"
+            ],
+            "icon": "🍄"
+        },
+        {
+            "type": "mermaid",
+            "content": [
+                "sequenceDiagram",
+                "participant Alice",
+                "participant John",
+                "Alice->>John: Hello John, how are you?",
+                "John-->>Alice: Great!",
+                "Alice-)John: See you later!"
+            ],
+            "tags": [
+                "sequenceDiagram"
+            ],
+            "icon": "🧊"
+        },
+        {
+            "type": "mermaid",
+            "content": [
+                "classDiagram",
+                "Animal <|-- Duck",
+                "Animal <|-- Fish",
+                "Animal <|-- Zebra",
+                "Animal : +int age",
+                "Animal : +String gender",
+                "Animal: +isMammal()",
+                "Animal: +mate()",
+                "class Duck{",
+                "+String beakColor",
+                "+swim()",
+                "+quack()",
+                "}",
+                "class Fish{",
+                "-int sizeInFeet",
+                "-canEat()",
+                "}",
+                "class Zebra{",
+                "+bool is_wild",
+                "+run()",
+                "}"
+            ],
+            "tags": [
+                "classDiagram"
+            ],
+            "icon": "🧊"
+        },
+        {
+            "type": "mermaid",
+            "content": [
+                "stateDiagram-v2",
+                "[*] --> Active",
+                "",
+                "state Active {",
+                "[*] --> NumLockOff",
+                "NumLockOff --> NumLockOn : EvNumLockPressed",
+                "NumLockOn --> NumLockOff : EvNumLockPressed",
+                "--",
+                "[*] --> CapsLockOff",
+                "CapsLockOff --> CapsLockOn : EvCapsLockPressed",
+                "CapsLockOn --> CapsLockOff : EvCapsLockPressed",
+                "--",
+                "[*] --> ScrollLockOff",
+                "ScrollLockOff --> ScrollLockOn : EvScrollLockPressed",
+                "ScrollLockOn --> ScrollLockOff : EvScrollLockPressed",
+                "}"
+            ],
+            "tags": [
+                "stateDiagram"
+            ],
+            "icon": "🧑‍🎓"
+        },
+        {
+            "type": "mermaid",
+            "content": [
+                "erDiagram",
+                "CAR ||--o{ NAMED-DRIVER : allows",
+                "CAR {",
+                "string registrationNumber",
+                "string make",
+                "string model",
+                "}",
+                "PERSON ||--o{ NAMED-DRIVER : is",
+                "PERSON {",
+                "string firstName",
+                "string lastName",
+                "int age",
+                "}"
+            ],
+            "icon": "✨",
+            "tags": [
+                "ERDiagram"
+            ]
+        },
+        {
+            "type": "mermaid",
+            "content": [
+                "journey",
+                "title My working day",
+                "section Go to work",
+                "Make tea: 5: Me",
+                "Go upstairs: 3: Me",
+                "Do work: 1: Me, Cat",
+                "section Go home",
+                "Go downstairs: 5: Me",
+                "Sit down: 5: Me"
+            ],
+            "icon": "🌵",
+            "tags": [
+                "journey"
+            ]
+        }
+    ]
+}

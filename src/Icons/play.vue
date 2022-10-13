@@ -6,7 +6,7 @@
 
 <script lang='ts' setup>
 import useTheme from '../state/useTheme';
-import {ref, watch} from 'vue';
+import {ref, watch, onMounted} from 'vue';
 import { storeToRefs } from 'pinia';
 
 const { theme } = storeToRefs(useTheme());
@@ -18,6 +18,14 @@ const props = defineProps(['height', 'width', 'color'])
 
 watch(theme, (val, oldVal) => {
     if (val === 'dark') {
+        color.value = props.color.dark;
+    } else {
+        color.value = props.color.light;
+    }
+})
+
+onMounted(() => {
+    if (theme.value === 'dark') {
         color.value = props.color.dark;
     } else {
         color.value = props.color.light;

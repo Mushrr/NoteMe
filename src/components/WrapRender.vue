@@ -21,6 +21,9 @@
         <template v-if="sec.type === 'audio'">
             <Audio :href="sec.href"></Audio>
         </template>
+        <template v-if="sec.type === 'mermaid'">
+            <Mermaid :content="sec.content" :tags="sec.tags" :icon="sec.icon" :theme="sec.theme"></Mermaid>
+        </template>
     </template>
 </template>
 
@@ -31,6 +34,7 @@ import SimpleText from './wrapComponents/SimpleText.vue';
 import ImageGallery from './wrapComponents/ImageGallery.vue';
 import SimpleTextRow from './wrapComponents/SimpleTextRow.vue';
 import Audio from './wrapComponents/Audio.vue';
+import Mermaid from './wrapComponents/Mermaid.vue';
 
 
 const props = defineProps<{
