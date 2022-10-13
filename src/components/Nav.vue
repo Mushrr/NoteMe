@@ -22,6 +22,7 @@
                     transition-all
                     duration-300
                     rounded-xl
+                    z-50
                     " 
                     @mouseover="showLinks=true" v-if="showLinkBlock">
                         <li class="dark:text-white" v-for="link of relLink">

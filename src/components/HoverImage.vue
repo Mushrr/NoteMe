@@ -8,6 +8,7 @@
      text-3xl
      dark:text-gray-400
      pr-2
+     z-0
      typing-animation"
      :style="{color: props.blogtitlecolor ? props.blogtitlecolor :'#ffffff' }"
      >{{props.blogtitle}}</span>
