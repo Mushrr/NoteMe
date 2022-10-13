@@ -20,7 +20,6 @@ export interface Blog {
         x: number,
         y: number
     }
-    contenteditable: Boolean
 }
 
 export type NoteMeElement = 'H' | 'SimpleText' | 'ImageGallery' | 'SimpleTextRow'

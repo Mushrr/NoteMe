@@ -39,7 +39,6 @@ import Mermaid from './wrapComponents/Mermaid.vue';
 
 const props = defineProps<{
     data: Array<Sec>;
-    contenteditable: Boolean
 }>()
 </script>
 

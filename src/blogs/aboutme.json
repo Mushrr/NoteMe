@@ -2,7 +2,7 @@
     "blogid": "TEST",
     "title": "About me",
     "blogimg": "/images/nanami.jpg",
-    "contenteditable": false,
+    "blogtitlecolor": "black",
     "content": [
         {
             "type": "h",

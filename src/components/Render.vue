@@ -1,6 +1,6 @@
 <template>
     <HoverImage :blogimg="props.data.blogimg" :blogtitle="props.data.title" :scroll="props.data.scroll" :blogtitlecolor="props.data.blogtitlecolor"></HoverImage>
-    <WrapRender :data="(props.data.content as Array<Sec>)" :contenteditable="props.data.contenteditable"></WrapRender>
+    <WrapRender :data="(props.data.content as Array<Sec>)" ></WrapRender>
     <!-- {{props.data}} -->
 </template>
 
