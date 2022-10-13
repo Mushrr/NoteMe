@@ -6,19 +6,13 @@
             </span>
         </div>
         <div class="col-start-1 col-end-3 text-2xl text-center underline border-l-4 border-r-4 border-blue-500">
-                blogs
-            </div>
-        <div 
-        id="content"
-        class="mt-10 grid md:grid-cols-2 grid-cols-1">
-            
+            blogs
+        </div>
+        <div id="content" class="mt-10 grid md:grid-cols-2 grid-cols-1">
+
             <div v-for="blog, index in blogs" ref="blogrefs">
-                <BlogBlock 
-                    :blogimg="blog.blogimg" 
-                    :blogtitle="blog.blogtitle" 
-                    :blogid="blog.blogid"
-                    @open-blog="jumpTo"
-                ></BlogBlock>
+                <BlogBlock :blogimg="blog.blogimg" :blogtitle="blog.blogtitle" :blogid="blog.blogid"
+                    @open-blog="jumpTo"></BlogBlock>
             </div>
         </div>
     </div>
@@ -41,19 +35,21 @@ const blogs = ref(
 )
 
 const watchScrollY = watch(y, (val, oldVal) => {
-    if (val > 100 && !load.value) {
-        for (let blogblock of blogrefs.value) {
-            console.log('开始动画')
-            gsap.from(blogblock, {
-                opacity: 0,
-                x: -100,
-                ease: "power-1",
-                duration: Math.random() + 0.8,
-            })
+    if (window.innerWidth > 550) {
+        if (val > 100 && !load.value) {
+            for (let blogblock of blogrefs.value) {
+                console.log('开始动画')
+                gsap.from(blogblock, {
+                    opacity: 0,
+                    x: -100,
+                    ease: "power-1",
+                    duration: Math.random() + 0.8,
+                })
+            }
+            console.log(blogrefs.value);
+            load.value = true;
+            watchScrollY(); // 停止监听
         }
-        console.log(blogrefs.value);
-        load.value = true;
-        watchScrollY(); // 停止监听
     }
 })
 
