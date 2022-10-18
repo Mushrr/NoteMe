@@ -32,7 +32,7 @@
                 </transition>
             </span>
             <to-dark-button></to-dark-button>
-            <router-link class="mr-2 ml-2 hover:underline dark:text-white" to="/about">about me</router-link>
+            <router-link class="mr-2 ml-2 hover:underline dark:text-white" to="/about">about</router-link>
         </span>
     </nav>
 </template>

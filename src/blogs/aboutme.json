@@ -2,66 +2,59 @@
     "blogid": "TEST",
     "title": "About me",
     "blogimg": "/images/nanami.jpg",
-    "blogtitlecolor": "black",
+    "scroll": {
+        "y": 10
+    },
+    "blogtitlecolor": "white",
     "content": [
         {
             "type": "h",
-            "elementId": "Self-Introducation",
             "level": 2,
-            "content": "Self-Introducation",
+            "content": "自我介绍",
             "children": [
+                "资深肥宅，喜欢做点有趣的事情，整点有趣的活",
                 {
-                    "type": "h",
-                    "level": 3,
-                    "elementId": "About work",
-                    "content": "About Work",
-                    "children": [
-                        {
-                            "elementId": "university",
-                            "type": "simpletextrow",
-                            "content": "I am in 3rd year of university, Learn So many different course like computer network、operating system etc. In my spire time, Learning some front knowledges is what I will do. ✨"
-                        }
+                    "type": "mermaid",
+                    "icon": "🤪",
+                    "align": "center",
+                    "tags": [
+                        "肥宅",
+                        "触发点",
+                        "废宅",
+                        "✨青山不倒，七海永存!✨",
+                        "肥宅",
+                        "触发点",
+                        "废宅",
+                        "✨青山不倒，七海永存!✨",
+                        "肥宅",
+                        "触发点",
+                        "废宅",
+                        "✨青山不倒，七海永存!✨"
+                    ],
+                    "content": [
+                        "graph LR",
+                        "青山七海 --> 我",
+                        "新酱 --> 我",
+                        "降智打击 --> 我",
+                        "喜欢整些花活 --> 我",
+                        "运动运动 --> 我"
                     ]
                 },
                 {
-                    "type": "h",
-                    "level": 3,
-                    "elementId": "Most",
-                    "content": "About Life",
-                    "children": [
-                        {
-                            "type": "simpletextrow",
-                            "content": "Most of my spire time, watch some animted film or enjoying some music."
-                        }
-
-                    ]
-                },
-                {
-                    "elementId": "qrvikkh7lt1utal0ajs2nugdmcvhqv97",
                     "type": "imagegallery",
-                    "href": "/images/clannadfamily.jpg"
-                },
-                {
-                    "type": "simpletext",
-                    "elementId": "contact",
-                    "icon": "🌵",
-                    "sectitle": "Contact Me",
-                    "children": [
-                        {
-                            "elementId": "with",
-                            "type": "h",
-                            "level": 3,
-                            "content": "You can contact me with"
-                        },
-                        {
-                            "elementId": "edu",
-                            "type": "h",
-                            "level": 3,
-                            "content": "mushroom@mails.ccnu.edu.cn"
-                        }
-                    ]
+                    "href": "/images/bqb1.jpg",
+                    "height": 800
                 }
             ]
+        },
+        
+        {
+            "type": "simpletextrow",
+            "content": "🍄联系我的话，可以直接到我的github"
+        },
+        {
+            "type": "simpletextrow",
+            "content": "🐔或者直接邮件找我 huangxingjiegkd@163.com"
         }
     ]
 }

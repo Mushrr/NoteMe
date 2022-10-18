@@ -22,7 +22,7 @@
             <Audio :href="sec.href"></Audio>
         </template>
         <template v-if="sec.type === 'mermaid'">
-            <Mermaid :content="sec.content" :tags="sec.tags" :icon="sec.icon" :theme="sec.theme"></Mermaid>
+            <Mermaid :content="sec.content" :tags="sec.tags" :icon="sec.icon" :theme="sec.theme" :align="sec.align"></Mermaid>
         </template>
     </template>
 </template>

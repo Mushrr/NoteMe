@@ -1,7 +1,7 @@
 <template>
     <div class="relative md:left-4 mt-2">
         <div id="wraper" class="p-4 border-2 rounded-xl">
-            <div id="tags" class="flex flex-row items-center" v-if="props.tags">
+            <div id="tags" class="flex flex-row items-center flex-wrap" v-if="props.tags">
                 <span class="text-4xl border-r-2 mr-2" v-if="props.icon">{{props.icon}}</span>
                 <span v-for="tag in tags" key="tag" class="
             mr-2 
@@ -20,7 +20,8 @@
                     {{tag}}
                 </span>
             </div>
-            <div ref="mermaidUnit">
+            <div ref="mermaidUnit" :style="{placeContent: (align === 'invalid' ? 'left' : align), 
+            display: align !== 'invalid' ? 'flex' : 'default'}">
 
             </div>
         </div>
@@ -51,6 +52,9 @@ const props = defineProps({
     },
     theme: {
         type: String
+    },
+    align: {
+        type: String
     }
 })
 
@@ -58,6 +62,18 @@ const mermaidContent = computed(() => {
     return props.content.reduce((p, c) => {
         return p + '\n' + c;
     })
+})
+
+const align = computed(() => {
+    if (props.align === "left") {
+        return "start";
+    } else if (props.align === "right") {
+        return "end";
+    } else if (props.align === "center") {
+        return "center";
+    } else {
+        return "invalid";
+    }
 })
 
 const mermaidUnit: Ref<null | HTMLElement> = ref(null);
