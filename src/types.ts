@@ -17,8 +17,8 @@ export interface Blog {
         [propnames: string]: any
     }>,
     scroll?: {
-        x: number,
-        y: number
+        x?: number,
+        y?: number
     }
 }
 

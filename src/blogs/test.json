@@ -10,6 +10,7 @@
         },
         {
             "type": "mermaid",
+            "align": "center",
             "content": [
                 "graph TB",
                 "A[13,032] --> |Accept John's Offer| B[12,000]",
@@ -34,6 +35,7 @@
         },
         {
             "type": "mermaid",
+            "align": "center",
             "content": [
                 "flowchart TB",
                 "c1-->a2",
@@ -54,6 +56,7 @@
         },
         {
             "type": "mermaid",
+            "align": "center",
             "content": [
                 "sequenceDiagram",
                 "participant Alice",
@@ -69,6 +72,7 @@
         },
         {
             "type": "mermaid",
+            "align": "center",
             "content": [
                 "classDiagram",
                 "Animal <|-- Duck",
@@ -99,6 +103,7 @@
         },
         {
             "type": "mermaid",
+            "align": "center",
             "content": [
                 "stateDiagram-v2",
                 "[*] --> Active",
@@ -124,6 +129,7 @@
         },
         {
             "type": "mermaid",
+            "align": "center",
             "content": [
                 "erDiagram",
                 "CAR ||--o{ NAMED-DRIVER : allows",
@@ -146,6 +152,7 @@
         },
         {
             "type": "mermaid",
+            "align": "center",
             "content": [
                 "journey",
                 "title My working day",

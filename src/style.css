@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'PingFang';
+    src: url('/font/pingfang0.TTF');
+}
+
 * {
     margin: 0;
     padding: 0;
     outline: none;
+    font-family: 'PingFang', "Microsoft YaHei";
 }
 
 *::-webkit-scrollbar {

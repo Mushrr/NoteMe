@@ -7,6 +7,6 @@
   },
   "include": [
     "vite.config.ts",
-    "src/editor/**/*"
+    "editor/**/*"
   ]
 }

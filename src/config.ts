@@ -16,9 +16,12 @@ const relLink = [
     }
 ]
 
+const mainBoardDialog = `More than mechanary, <br />we need more humanity.`
+
 export {
     baseURL,
     author,
     avator,
-    relLink
+    relLink,
+    mainBoardDialog
 }

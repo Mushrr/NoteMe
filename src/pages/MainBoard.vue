@@ -1,9 +1,10 @@
 <template>
     <div>
         <div class=" flex place-content-center items-center" style="height: 90vh">
-            <span class="text-2xl font-mono  typing-animation border-red-400">
-                More than mechanary, <br />we need more humanity.
+            <span class="text-2xl font-mono  typing-animation border-red-400" v-html="mainBoardDialog">
             </span>
+            <!-- 插入标题页面文字 -->
+
         </div>
         <div class="col-start-1 col-end-3 text-2xl text-center underline border-l-4 border-r-4 border-blue-500">
             blogs
@@ -26,6 +27,7 @@ import useScroll from '../use/useScroll';
 import BlogBlock from '../components/BlogBlock.vue';
 import router from '../router';
 import allPages from '../blogs/blogs.json'
+import { mainBoardDialog } from '../config';
 
 const { x, y } = useScroll();
 const load = ref(false);
