@@ -12,7 +12,7 @@
         </span>
         <span class="flex flex-row items-center">
             <span class="relative mr-2" @mouseout="showLinks=false">
-                <span class="dark:text-white" @mouseover="showLinks=true">links</span>
+                <span class="dark:text-white" @mouseover="showLinks=true">Links</span>
                 <transition>
                     <ul class="absolute
                     p-2
@@ -32,7 +32,7 @@
                 </transition>
             </span>
             <to-dark-button></to-dark-button>
-            <router-link class="mr-2 ml-2 hover:underline dark:text-white" to="/about">about</router-link>
+            <router-link class="mr-2 ml-2 hover:underline dark:text-white" to="/about">About</router-link>
         </span>
     </nav>
 </template>

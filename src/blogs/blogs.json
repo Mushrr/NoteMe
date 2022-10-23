@@ -1,10 +1,5 @@
 [
     {
-        "blogtitle": "About me",
-        "blogimg": "/images/nanami.jpg",
-        "blogid": "aboutme"
-    },
-    {
         "blogtitle": "Clannad",
         "blogimg": "/images/clannadfamily.jpg",
         "blogid": "clannad"

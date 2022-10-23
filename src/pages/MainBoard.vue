@@ -36,24 +36,24 @@ const blogs = ref(
     allPages
 )
 
-const watchScrollY = watch(y, (val, oldVal) => {
-    if (window.innerWidth > 550) {
-        if (val > 100 && !load.value) {
-            for (let blogblock of blogrefs.value) {
-                console.log('开始动画')
-                gsap.from(blogblock, {
-                    opacity: 0,
-                    x: -100,
-                    ease: "power-1",
-                    duration: Math.random() + 0.8,
-                })
-            }
-            console.log(blogrefs.value);
-            load.value = true;
-            watchScrollY(); // 停止监听
-        }
-    }
-})
+// const watchScrollY = watch(y, (val, oldVal) => {
+//     if (window.innerWidth > 550) {
+//         if (val > 100 && !load.value) {
+//             for (let blogblock of blogrefs.value) {
+//                 console.log('开始动画')
+//                 gsap.from(blogblock, {
+//                     opacity: 0,
+//                     x: -100,
+//                     ease: "power-1",
+//                     duration: Math.random() + 0.8,
+//                 })
+//             }
+//             console.log(blogrefs.value);
+//             load.value = true;
+//             watchScrollY(); // 停止监听
+//         }
+//     }
+// })
 
 function jumpTo(blogid: string) {
     console.log(blogid);
