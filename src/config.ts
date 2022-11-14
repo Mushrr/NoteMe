@@ -18,10 +18,13 @@ const relLink = [
 
 const mainBoardDialog = `More than mechanary, <br />we need more humanity.`
 
+const defaultImageSrc = "/images/default.jpg"
+
 export {
     baseURL,
     author,
     avator,
     relLink,
-    mainBoardDialog
+    mainBoardDialog,
+    defaultImageSrc
 }

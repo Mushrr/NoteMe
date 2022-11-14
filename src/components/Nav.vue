@@ -7,9 +7,9 @@
             </span>
             <span class="pl-4 dark:text-gray-200">{{author}}</span>
         </span>
-        <span>
+        <!-- <span>
             <input placeholder="search some" class="border-b-2 border-black h-8 dark:bg-black dark:text-white" />
-        </span>
+        </span> -->
         <span class="flex flex-row items-center">
             <span class="relative mr-2" @mouseout="showLinks=false">
                 <span class="dark:text-white" @mouseover="showLinks=true">Links</span>

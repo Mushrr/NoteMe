@@ -1,3 +1,4 @@
+import { Ref } from "vue";
 import { NoteMeElement } from "./types";
 
 function randomStr(length: number) {
@@ -57,8 +58,17 @@ function isEditor(contenteditable: boolean, callback: (...args: any[]) => any) {
         callback();
     }
 }
+
+function imageLazyLoad(src: string, reference: Ref<string>) {
+    let image = new Image();
+    image.src = src;
+    image.addEventListener("load", () => {
+        reference.value = src;
+    })
+}
 export {
     randomStr,
     createNode,
-    isEditor
+    isEditor,
+    imageLazyLoad
 }
